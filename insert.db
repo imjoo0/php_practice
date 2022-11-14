@@ -1,0 +1,31 @@
+mysql -u root -p
+
+CREATE DATABASE opentutorials;
+SHOW DATASASES;
+
+CREATE TABLE topic (
+id int(11) NOT NULL AUTO_INCREMENT,
+title varchar(45) NOT NULL,
+description text, 
+created datetime NOT NULL,
+PRIMARY KEY(id)
+) ENGINE=InnoDB; // InnoDB는 mysql 의 default값 
+
+use opentutorials;
+show tables
+desc topic 
+
+SELECT * FROM topic;
+
+DELETE FROM topic WHERE id=5;
+
+SELECT * FROM topic;
+
+php mysql api choosing an API 
+
+API myslql i 
+pdo_mysql
+ext/mysqli
+
+INSERT php -p
+
