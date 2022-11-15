@@ -14,17 +14,15 @@ while($row = mysqli_fetch_array($result)){
 }
 
 $article = array(
-    'title' => 'WELCOME',
-    'description' => 'HELLO WEB'
+    'title' => $row['title'],
+    'description' => $row['description']
 );
 
-if(isset($_GET['id'])){
-    $sql = "SELECT * FROM topic WHERE id={$_GET['id']}";
-    $result = mysqli_query($conn,$sql);
-    $row = mysqli_fetch_array($result);
-    $article['title'] = $row['title'];
-    $article['description'] = $row['description'];
-}
+
+$sql = "SELECT * FROM topic WHERE id={$_GET['id']}";
+// echo $sql;
+$result = mysqli_query($conn,$sql);
+$row = mysqli_fetch_array($result);
 
 ?>
 
@@ -35,12 +33,12 @@ if(isset($_GET['id'])){
     <title>WEB</title>
   </head>
   <body>
-    <h1><a href="index.php">WEB</a></h1>
+    <h1><a href="">WEB</a></h1>
     <ol>
       <?=$list?>
     </ol>
     <a href="create.php">create</a>
-    <h2><?=$article['title']?></h2>
-    <?=$article['description']?>
-</body>
+    <h2>Welcome</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus natus libero sit ad, nemo iusto minus reiciendis cum suscipit commodi dolores eveniet similique asperiores doloribus dolore excepturi nostrum consectetur beatae.
+  </body>
 </html>
