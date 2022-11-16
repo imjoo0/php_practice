@@ -10,7 +10,7 @@ $sql = "SELECT * FROM topic";
 $result = mysqli_query($conn, $sql);
 $list = '';
 while($row = mysqli_fetch_array($result)){
-    $list = $list."<li><a href = \"index.php?id={$row['id']}\">{$row['title']}</a></li>";
+  $list = $list."<li><a href = \"index.php?id={$row['id']}\">{$row['title']}</a></li>";
 }
 
 $article = array(
